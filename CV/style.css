@@ -6,10 +6,13 @@ main{
 }
 .sec2{
     flex: 1;
-    margin-top: -30px;
+    margin-top: -50px;
     display: flex;
     flex-direction: column;
-    background-color: gainsboro;
+    background-color: rgb(220, 220, 220);
+    margin-left: 10px;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
 }
 .sec2 h3{
     /* flex: 1;
@@ -28,11 +31,24 @@ main{
 header{
     background-color: #2a354b;
     color: white;
+    height: 150px;
+    
+}
+header .texte{
+    padding-right: 50px;
+    padding-top: 20px;
 }
 .profil{
     color: #2a354b;
     background-color: gainsboro;
     border-top-right-radius: 20px; border-bottom-right-radius: 20px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin: 20px 0px 20px 0px;
+}
+.profil .icon{
+    margin-right: 5px;
 }
 .sec2 h3{
     
@@ -42,17 +58,42 @@ header{
     width: 200px ;height: auto ;
     justify-content: center;
     border-radius: 20px;
-    margin-top: -50px;
+    margin-top: -80px;
 
 }
 .photo{
     text-align: center;
 }
 .icon{
-    width: 20px;height: auto;
-    margin-right: 10px;
-    margin-left: 10px;
+    width: 25px;height: auto;
+    /* margin-right: 10px; */
+    margin-left: 20px;
 }
-.profil {
+/* .profil {
     text-align: CENTER;
+} */
+
+.ctn ul{
+    list-style-type: none;
+}
+.ctn ul li .ic{
+    margin-right: 10px;
+}
+.ctn{
+    margin-left: 50px;
+}
+.compt{
+    margin-left: 50px;
+}
+@media screen and (max-width: 500px) {
+    .main{
+        display: block;
+    }
+    header{
+        height: 200px;
+        width: 100%;
+    }
+}
+@media screen and (min-width: 300px) {
+    
 }
