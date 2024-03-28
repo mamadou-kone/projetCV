@@ -298,3 +298,24 @@ header .texte{
         margin-left: 50px;
     }
 }
+@media only screen and (min-width: 1000px){
+    body{
+        font-size: 100%;       
+     }
+        .image{
+            width: 300px ;height: auto ;
+            justify-content: center;
+            border-radius: 20px;
+            margin-top: -80px;
+        
+
+
+    }
+    .ctn ul{
+        list-style-type: none;
+        width: 500px;
+        text-wrap: wrap;
+        overflow-wrap: break-word;
+    }
+
+}
