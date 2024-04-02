@@ -1,0 +1,40 @@
+name: Construction et Déploiement du CV
+
+sur:
+  push:
+    branches:
+      - MamadouKoneBranch
+
+travaux:
+  construction:
+    s'exécute sur: ubuntu-dernier
+
+    étapes:
+      - nom: Récupération du code
+        utilise: actions/checkout@v2
+
+      - nom: Configuration de Node.js
+        utilise: actions/setup-node@v2
+        avec:
+          version-node: '14'
+
+      - nom: Installation des dépendances
+        exécuter: npm install
+
+      - nom: Construction du projet
+        exécuter: npm run build
+
+  déploiement:
+    s'exécute sur: ubuntu-dernier
+
+    besoins: construction
+
+    étapes:
+      - nom: Récupération du code
+        utilise: actions/checkout@v2
+
+      - nom: Déploiement sur GitHub Pages
+        utilise: peaceiris/actions-gh-pages@v3
+        avec:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          répertoire_publication: ./build
